@@ -10,11 +10,11 @@ Change the following variables (v1.1.0)
 ```
 
 # Directory
-[package folder](https://github.com/rakudola/findfrag/tree/master/package)
-: Contains the base program + input and output files of a run.
-
 [combine folder](https://github.com/rakudola/findfrag/tree/master/combine)
 : Related project; base code to combine and analyze sequences for RA sick and healthy albumin written by Lavender
+
+[package folder](https://github.com/rakudola/findfrag/tree/master/package)
+: Contains the base program + input and output files of a run.
 
 # What is this program?
 This program takes:
