@@ -1,9 +1,12 @@
 # Directory
-[combine folder](https://github.com/rakudola/findfrag/tree/master/combine)
+[combine](https://github.com/rakudola/findfrag/tree/master/combine)
 : Related project; base code to combine and analyze sequences for RA sick and healthy albumin written by Lavender
 
-[package folder](https://github.com/rakudola/findfrag/tree/master/package)
-: Contains the base program + input and output files of a run.
+[old versions](https://github.com/rakudola/findfrag/tree/master/old%20versions)
+: Old versions of the program and changelog
+
+[package](https://github.com/rakudola/findfrag/tree/master/package)
+: Contains the base program + example input and output files of a run
 
 # What is this program?
 This program takes:
