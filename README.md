@@ -1,7 +1,10 @@
 # Note on input/output files
-- **If you are using Spyder:** The filepaths for the in-/outfile variables can be created based on the directory the code is in
-- **If you are using Canopy:** The full filepaths are needed for the in-/outfiles
-## To adjust input/output files
+**If you are using Spyder:** The filepaths for the in-/outfile variables can be created based on the directory the code is in
+- e.g., "../SA sequence.csv"
+
+**If you are using Canopy:** The full filepaths are needed for the in-/outfiles
+- e.g., "C:/Users/Downloads/findfrag/Input/SA sequence.csv"
+## To change input/output files
 Change the following variables (v1.1.0)
 ```python
 16 sequence_infile = "C:/Users/spectrum/Downloads/recsvfiles/SA sequence.csv"
