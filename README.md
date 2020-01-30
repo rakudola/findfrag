@@ -1,15 +1,44 @@
-# findfrag
-Download and run the contents of the "package" folder for a demonstration
+# Note on input/output files
+- **If you are using Spyder:** The filepaths for the in-/outfile variables can be created based on the directory the code is in
+- **If you are using Canopy:** The full filepaths are needed for the in-/outfiles
+## To adjust input/output files
+Change the following variables (v1.1.0)
+```python
+16 sequence_infile = "C:/Users/spectrum/Downloads/recsvfiles/SA sequence.csv"
+17 fragments_infile = "C:/Users/spectrum/Downloads/recsvfiles/csv for blast.csv"
+18 outfile_name = "C:/Users/spectrum/Downloads/recsvfiles/SA sequence blast.csv"
+```
 
-## To Do
-Create the master list of all sequence/PTM
-- put all sequence (combine sick and health) together, remove the duplicate
-- this list will become the key for the merging program
+# Directory
+[package folder](https://github.com/rakudola/findfrag/tree/master/package)
+: Contains the base program + input and output files of a run.
 
+[combine folder](https://github.com/rakudola/findfrag/tree/master/combine)
+: Related project; base code to combine and analyze sequences for RA sick and healthy albumin written by Lavender
 
-Using the merging program attached, 
-- merge each file base on the peptide key from step 1
-- right now we will need to do it one by one, 50 time, to generate the big master list (but it will not take too long for each step)
+# What is this program?
+This program takes:
+- input sequence (csv file)
+- fragments to find in sequence (csv file)
 
+and outputs:
+- where and how many times the fragments were found in the input sequence (csv file)
 
-But, at the end, what we really want is the PTM@position for each raw, and sample# for each column.
+# File formatting (v1.1.0)
+## Input sequence file
+Program will ONLY read first cell in each row. If you need to break up the sequence, please ensure the pieces of the sequence are all in the first cell of their own rows. Please do not include any extra data in the csv, including headers, as this may add the extra, unwanted data to the sequence.
+
+## Input fragment file
+Program will ONLY read first cell in each row. Please put one fragment in the first cell of each row.
+
+## Output file
+**Example data**
+
+Fragment | # of Occurences | Start, End 
+--- | --- | ---
+abc | 1 | (1, 3) 
+efg | 1 | (4, 6)
+
+The third column gives the fragment's start and end position in the sequence.
+
+If there are multiple occurences of the fragment, the locations will continue printing to the right in the fragment's row without column headers.
