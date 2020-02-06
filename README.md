@@ -69,6 +69,14 @@ and outputs:
 ### Input sequence file
 Program will take the protein ID from whatever is between ```>sp|``` and the next ```|```. The sequence will be read from the next line (or row) to the next line (or row) starting with ```>```.
 
+**.txt Example**
+```
+>sp|Q6ZSK4|NTAS1_HUMAN Putative uncharacterized protein NTM-AS1 OS=Homo sapiens OX=9606 GN=NTM-AS1 PE=5 SV=1
+MKGQEGIRGEGCTDPEIKASPQMWAARFRGMRSRFSPLFSQATEMGPRVSAGWCLSGGGR
+KVSSLQGDFPPGGFWALSNDSALSLPPLSLPHPHPLRPPGLGVNEFTQGLHPPLHPAASV
+FQTCFYRKPHYCSTLRPTTT
+```
+
 ### Input fragment file
 Program will ONLY read first cell in each row. Please put one fragment in the first cell of each row.
 
