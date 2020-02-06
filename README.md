@@ -28,7 +28,7 @@ Change the following variables (v1.1.0)
 : Old versions of the program and changelog
 
 [package](https://github.com/rakudola/findfrag/tree/master/package)
-: Contains the base program + example input and output files of a run
+: Contains the base single-sequence program + example input and output files
 
 # find fragment.py
 This program takes:
