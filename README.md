@@ -83,11 +83,9 @@ Program will ONLY read first cell in each row. Please put one fragment in the fi
 ### Output file
 **Example data**
 
-Protein ID | Fragment 1 | Fragment 2
+Peptide | Protein ID | (Start, End)
 --- | --- | ---
-ABC123 | (1, 3) | (2, 4) (6, 8) 
-DEF456 | (5, 7) (10, 12) | (8, 10)
+ABCDEFG | ABC123 | (1, 7)
+HIJKLMN | ABC123 | (8, 14)
 
-The fragment locations are formatted (start position, end position).
-
-If the fragment is found multiple time in one protein sequence, the locations will all be in that fragment's column separated by a space.
+Only fragments found in a sequence will be printed. If a fragment is found multiple times in a sequence, the (start, end) positions will continue printing in the row in cells to the right.
