@@ -46,3 +46,7 @@ ABCDEFG | ABC123 | (1, 7)
 HIJKLMN | ABC123 | (8, 14)
 
 Only fragments found in a sequence will be printed. If a fragment is found multiple times in a sequence, the (start, end) positions will continue printing in the row in cells to the right.
+
+## v1.3.0
+(2020/2/11)
+- Fixed bug where txt file input would keep sequence broken up
