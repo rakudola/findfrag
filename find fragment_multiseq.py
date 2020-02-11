@@ -13,9 +13,9 @@ if START_POSITION is 0, then a sequence is numbered like this:
 START_POSITION = 1
 
 # If a file isn't opening, use its entire path here
-fragments_infile = "test_frag2.csv"
-sequence_infile = "test_input2.txt"
-outfile_name = "test_output1.csv"
+fragments_infile = "csv for blast.csv"
+sequence_infile = "test_input.txt"
+outfile_name = "test_output2.csv"
 
 """
 Editing code below this line will affect functionality!
@@ -60,7 +60,6 @@ try:
     protein_id = ""
 
     if (infile_type == "csv"):
-        """Not fixed, please fix :("""
         sequencefile = open(sequence_infile, 'r', newline = '')
         with sequencefile: # open sequence_infile
             sequence_reader = csv.reader(sequencefile) # create reader object; reads sequence_infile
@@ -101,7 +100,7 @@ try:
                         id_loc += 1
 
                 else:
-                    protein_seq += line
+                    protein_seq += line.rstrip() # adds line to full sequence, stripping trailing newline
 
                 try:
                     line = sequencefile.readline()
@@ -135,6 +134,7 @@ try:
                 # find each fragment instance in sequence
                 res = [k for k in range(len(sequences[i])) if sequences[i].startswith(fragments[j], k)]
                 if (len(res) != 0): # if the fragment was found in the sequence more than 0 times
+                    print(sequences[i])
                     for k in range(len(res)): # for each time fragment found
                         # create string with start and end position of fragment; add to dictionary
                         frag_start = str(START_POSITION + res[k])
